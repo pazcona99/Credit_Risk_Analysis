@@ -12,38 +12,38 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
 - Oversample / RandomOverSampler
     - ![Oversampling_RandomOverSampler](./Resources/Oversampling_RandomOverSampler.PNG)
 
-    - Balanced accuracy scores = 0.64
+    - Balanced accuracy scores = 0.66
     - High_risk Precision = 0.01
-    - High_risk recall (Sensitivity) = 0.64
+    - High_risk recall (Sensitivity) = 0.69
     - High_risk F1 score = 0.02
     - Low_risk Precision = 1.0
-    - Low_risk recall = 0.66
-    - Low_risk F1 score = 0.79
+    - Low_risk recall = 0.63
+    - Low_risk F1 score = 0.77
     - The high_risk precision score doesn't looks good and this make the f1 score result in worse
 
     
 - Oversample / SMOTE
     - ![Oversampling_SMOTE](./Resources/Oversampling_SMOTE.PNG)
 
-    - Balanced accuracy scores = 0.63
+    - Balanced accuracy scores = 0.662
     - High_risk Precision = 0.01
-    - High_risk recall (Sensitivity) = 0.62
+    - High_risk recall (Sensitivity) = 0.63
     - High_risk F1 score = 0.02
     - Low_risk Precision = 1.0
-    - Low_risk recall = 0.64
-    - Low_risk F1 score = 0.78
+    - Low_risk recall = 0.69
+    - Low_risk F1 score = 0.82
     - The high_risk precision score doesn't looks good and this make the f1 score result in worse
 
 - Undersample / ClusterCentroids
     - ![Undersampling_ClusterCentroids](./Resources/Undersampling_ClusterCentroids.PNG)
 
-    - Balanced accuracy scores = 0.51
+    - Balanced accuracy scores = 0.544
     - High_risk Precision = 0.01
-    - High_risk recall (Sensitivity) = 0.57
+    - High_risk recall (Sensitivity) = 0.69
     - High_risk F1 score = 0.01
     - Low_risk Precision = 1.0
-    - Low_risk recall = 0.45
-    - Low_risk F1 score = 0.62
+    - Low_risk recall = 0.40
+    - Low_risk F1 score = 0.56
     - Undersampleing with ClusterCentroids reports are even worse than the oversample models above. 
 
 - Combine (Over- and Undersample) / SMOTEENN algorithm
@@ -51,23 +51,23 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
 
     - Balanced accuracy scores = 0.64
     - High_risk Precision = 0.01
-    - High_risk recall (Sensitivity) = 0.74
+    - High_risk recall (Sensitivity) = 0.70
     - High_risk F1 score = 0.02
     - Low_risk Precision = 1.0
-    - Low_risk recall = 0.55
-    - Low_risk F1 score = 1.0
+    - Low_risk recall = 0.58
+    - Low_risk F1 score = 0.73
     - We don't see much improvement using resampling with SMOTEENN, only some of the metrics such as recall score has an improvement over undersampling.
 
 - BalanceRandomForestClassifier
     - ![BalancedRandomForestClassifier](./Resources/BalancedRandomForestClassifier.PNG)
 
-    - Balanced accuracy scores = 0.999
-    - High_risk Precision = 0.83
-    - High_risk recall (Sensitivity) = 1.0
-    - High_risk F1 score = 0.91
+    - Balanced accuracy scores = 0.788
+    - High_risk Precision = 0.03
+    - High_risk recall (Sensitivity) = 0.70
+    - High_risk F1 score = 0.06
     - Low_risk Precision = 1.0
-    - Low_risk recall = 1.0
-    - Low_risk F1 score = 1.0
+    - Low_risk recall = 0.87
+    - Low_risk F1 score = 0.93
     - Using ensemble algorithms with Balance Random forest Classifier is impressive, we have a great balanced accuracy score, all the metrics on classification report looks great.
 
 - EasyEnsebleClassifier
@@ -81,8 +81,8 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
     - Low_risk Precision = 1.0
     - Low_risk recall = 0.94
     - Low_risk F1 score = 0.92
-    - Using ensemble algorithms with Easy Enseble Classifier is impressive, we have a great balanced accuracy score, all the metrics on classification report are score in 1.0
+    - Using ensemble algorithms with Easy Enseble Classifier is impressive, we have a great balanced accuracy score, all the metrics on classification report are score in high 90's.
 
 # Summary
 
-## Recomendation
+According to the balanced accuracy scores, and the metric scores from classification reports of each models, the Easy Enseble Classifier has the best balance, Balance Random Forest Classifier in second place. I would recommend both ensemble model.
