@@ -10,7 +10,7 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
 # Results
 
 - Oversample / RandomOverSampler
-    - ![](https://github.com/helen3121433/Credit_Risk_Analysis/blob/main/Resources/RandomOverSampler.PNG)
+    - ![Oversampling_RandomOverSampler](./Resources/Oversampling_RandomOverSampler.PNG)
 
     - Balanced accuracy scores = 0.64
     - High_risk Precision = 0.01
@@ -23,7 +23,7 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
 
     
 - Oversample / SMOTE
-    - ![](https://github.com/helen3121433/Credit_Risk_Analysis/blob/main/Resources/SMOTE.PNG)
+    - ![Oversampling_SMOTE](./Resources/Oversampling_SMOTE.PNG)
 
     - Balanced accuracy scores = 0.63
     - High_risk Precision = 0.01
@@ -35,7 +35,7 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
     - The high_risk precision score doesn't looks good and this make the f1 score result in worse
 
 - Undersample / ClusterCentroids
-    - ![](https://github.com/helen3121433/Credit_Risk_Analysis/blob/main/Resources/ClusterCentroids.PNG)
+    - ![Undersampling_ClusterCentroids](./Resources/Undersampling_ClusterCentroids.PNG)
 
     - Balanced accuracy scores = 0.51
     - High_risk Precision = 0.01
@@ -47,7 +47,7 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
     - Undersampleing with ClusterCentroids reports are even worse than the oversample models above. 
 
 - Combine (Over- and Undersample) / SMOTEENN algorithm
-    - ![](https://github.com/helen3121433/Credit_Risk_Analysis/blob/main/Resources/SMOTEENN.PNG)
+    - ![Combination_Sampling_SMOTEEN](./Resources/Combination_Sampling_SMOTEEN.PNG)
 
     - Balanced accuracy scores = 0.64
     - High_risk Precision = 0.01
@@ -59,7 +59,7 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
     - We don't see much improvement using resampling with SMOTEENN, only some of the metrics such as recall score has an improvement over undersampling.
 
 - BalanceRandomForestClassifier
-    - ![](https://github.com/helen3121433/Credit_Risk_Analysis/blob/main/Resources/BalanceRandomForestClassifier.PNG)
+    - ![BalancedRandomForestClassifier](./Resources/BalancedRandomForestClassifier.PNG)
 
     - Balanced accuracy scores = 0.999
     - High_risk Precision = 0.83
@@ -71,15 +71,16 @@ Using the credit card credit dataset from LendingClub, a peer-to-peer lending se
     - Using ensemble algorithms with Balance Random forest Classifier is impressive, we have a great balanced accuracy score, all the metrics on classification report looks great.
 
 - EasyEnsebleClassifier
-    - ![](https://github.com/helen3121433/Credit_Risk_Analysis/blob/main/Resources/EasyEnsembleClassifier.PNG)
+    - ![EasyEnsembleClassifier](./Resources/EasyEnsembleClassifier.PNG)
 
     - Balanced accuracy scores = 1.0
-    - High_risk Precision = 1.0
-    - High_reish recall (Sensitivity) = 1.00
-    - F1 score = 1.00
+    - High_risk Precision = 0.92
+    - High_risk recall (Sensitivity) = 0.94
+    - High_Risk_F1 score = 0.16
+    - Low_Risk_F1 score = 0.97
     - Low_risk Precision = 1.0
-    - Low_risk recall = 1.0
-    - Low_risk F1 score = 1.0
+    - Low_risk recall = 0.94
+    - Low_risk F1 score = 0.92
     - Using ensemble algorithms with Easy Enseble Classifier is impressive, we have a great balanced accuracy score, all the metrics on classification report are score in 1.0
 
 # Summary
